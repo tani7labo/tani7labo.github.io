@@ -1,0 +1,192 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --accent-color: #8b5cf6;
+    --font-family: 'Inter', 'Noto Sans JP', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Blobs for specific look */
+.background-blob {
+    position: fixed;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0) 70%);
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.background-blob-2 {
+    position: fixed;
+    bottom: -100px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, rgba(139, 92, 246, 0) 70%);
+    z-index: -1;
+    filter: blur(60px);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.app-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.policy-card {
+    background-color: var(--card-background);
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.policy-header {
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.policy-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.effective-date {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.policy-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 40px 0 16px;
+    color: var(--text-primary);
+    position: relative;
+    padding-left: 14px;
+}
+
+.policy-content h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.policy-content p {
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.policy-content ul {
+    margin-bottom: 24px;
+    padding-left: 20px;
+    color: var(--text-secondary);
+}
+
+.policy-content ul li {
+    margin-bottom: 12px;
+}
+
+.policy-content strong {
+    color: var(--text-primary);
+}
+
+.policy-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.policy-content a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.contact-info {
+    background-color: #f8fafc;
+    padding: 24px;
+    border-radius: 12px;
+    margin-top: 24px;
+    border-left: 4px solid var(--primary-color);
+}
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+@media (max-width: 640px) {
+    .policy-card {
+        padding: 30px 20px;
+    }
+
+    .policy-header h2 {
+        font-size: 24px;
+    }
+}
