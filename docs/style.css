@@ -166,6 +166,20 @@ main {
     text-decoration: underline;
 }
 
+.link-card {
+    background-color: #f1f5f9;
+    padding: 16px 24px;
+    border-radius: 10px;
+    margin: 16px 0 24px;
+    display: inline-block;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+    background-color: #e2e8f0;
+}
+
 .contact-info {
     background-color: #f8fafc;
     padding: 24px;
