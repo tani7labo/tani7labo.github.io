@@ -61,15 +61,11 @@ const VariationC = () => {
               <ul className="vc-sidecard-list">
                 <li>
                   <span className="vc-bullet">→</span>
-                  {lang === 'ja' ? '個人開発、ひとりで完結。' : 'One person, end to end.'}
-                </li>
-                <li>
-                  <span className="vc-bullet">→</span>
                   {lang === 'ja' ? '小さな道具を、長く作る。' : 'Tiny tools, long-running.'}
                 </li>
                 <li>
                   <span className="vc-bullet">→</span>
-                  {lang === 'ja' ? '基本はSwift / TypeScript。' : 'Mostly Swift / TypeScript.'}
+                  {lang === 'ja' ? '基本はFlutter / Dart。' : 'Mostly Flutter / Dart.'}
                 </li>
               </ul>
             </aside>
@@ -135,7 +131,10 @@ const VariationC = () => {
                       </React.Fragment>
                     ))}
                   </div>
-                  <div className="vc-card-arrow">↗</div>
+                  {app.url !== '#'
+                    ? <a href={app.url} target="_blank" rel="noopener" className="vc-card-play" onClick={e => e.stopPropagation()}>Google Play ↗</a>
+                    : <div className="vc-card-arrow">↗</div>
+                  }
                 </div>
               </article>
             ))}
@@ -153,7 +152,7 @@ const VariationC = () => {
           <div className="vc-section-head">
             <div>
               <div className="vc-section-num">§ 02</div>
-              <h2 className="vc-section-title">{lang === 'ja' ? '研究手順' : 'Methods'}</h2>
+              <h2 className="vc-section-title">{lang === 'ja' ? '開発手順' : 'Methods'}</h2>
             </div>
           </div>
           <ol className="vc-method-list">
@@ -191,13 +190,12 @@ const VariationC = () => {
         <footer className="vc-foot">
           <div className="vc-foot-stamp">
             <div className="vc-foot-stamp-line">SIGNED</div>
-            <div className="vc-foot-stamp-name">谷七 / tani7</div>
+            <div className="vc-foot-stamp-name">Tani7Labo</div>
             <div className="vc-foot-stamp-line">2026.05.25</div>
           </div>
           <div className="vc-foot-links">
-            <a href="#">github.com/tani7labo</a>
-            <a href="#">x.com/tani7labo</a>
-            <a href="mailto:hi@tani7labo.dev">hi@tani7labo.dev</a>
+            <a href="https://x.com/Tani7Labo" target="_blank" rel="noopener">x.com/Tani7Labo</a>
+            <a href="mailto:tani7labo@gmail.com">tani7labo@gmail.com</a>
           </div>
           <div className="vc-foot-page">— p. 001 / ∞ —</div>
         </footer>
@@ -541,6 +539,16 @@ const vcCss = `
 }
 .vc-stack-sep { margin: 0 5px; opacity: 0.6; }
 .vc-card-arrow { font-size: 16px; color: var(--ink); }
+.vc-card-play {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  color: var(--lime-deep);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid oklch(0.55 0.16 125 / 0.4);
+  padding-bottom: 1px;
+}
+.vc-card-play:hover { border-bottom-color: var(--lime-deep); }
 
 /* Empty card */
 .vc-card-empty {
