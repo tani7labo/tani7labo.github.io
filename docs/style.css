@@ -195,7 +195,84 @@ footer {
     font-size: 14px;
 }
 
+.app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0 32px;
+}
+
+.app-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.app-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.app-card-name {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.app-card-platform {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.app-card-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+    margin: 0;
+}
+
+.app-store-btn {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.app-store-btn:hover {
+    color: var(--primary-hover);
+}
+
 @media (max-width: 640px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+}
     .policy-card {
         padding: 30px 20px;
     }
