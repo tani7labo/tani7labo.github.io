@@ -61,11 +61,11 @@ const VariationC = () => {
               <ul className="vc-sidecard-list">
                 <li>
                   <span className="vc-bullet">→</span>
-                  {lang === 'ja' ? '小さな道具を、長く作る。' : 'Tiny tools, long-running.'}
+                  {lang === 'ja' ? '個人開発、ひとりで完結。' : 'One person, end to end.'}
                 </li>
                 <li>
                   <span className="vc-bullet">→</span>
-                  {lang === 'ja' ? '基本はFlutter / Dart。' : 'Mostly Flutter / Dart.'}
+                  {lang === 'ja' ? '小さな道具を、長く作る。' : 'Tiny tools, long-running.'}
                 </li>
               </ul>
             </aside>
