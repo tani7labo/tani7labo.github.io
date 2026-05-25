@@ -196,6 +196,7 @@ const VariationC = () => {
           <div className="vc-foot-links">
             <a href="https://x.com/Tani7Labo" target="_blank" rel="noopener">x.com/Tani7Labo</a>
             <a href="mailto:tani7labo@gmail.com">tani7labo@gmail.com</a>
+            <a href="privacy.html">{lang === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}</a>
           </div>
           <div className="vc-foot-page">— p. 001 / ∞ —</div>
         </footer>
